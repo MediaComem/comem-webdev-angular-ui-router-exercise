@@ -6,11 +6,12 @@ This repository contains a starter project for an Angular UI router exercise in 
 
 Set up the same kind of routing structure as in the [Angular UI router slides][slides]:
 
-* A home page accessible by clicking the DiaLog link in the navbar
+* A home page (state) accessible by clicking the DiaLog link in the navbar
   (a `HomePageController` in `js/home.js` and template in `templates/home.html` are provided for you)
-* A chat list page accessible by clicking the My DiaLogs link in the navbar
+* A chat list page (state) accessible by clicking the My DiaLogs link in the navbar
   (a `ChatsPageController` in `js/chats.js` and template in `templates/chats.html` are provided for you)
-* A chat details state showing a chat's messages to the right of the list
+* A chat details state showing a chat's messages to the right of the list,
+  accessible by clicking one of the chats in the list
   (a `ChatPanelController` in `js/chats.js` and template in `templates/chat-panel.html` are provided for you)
 
 Also:

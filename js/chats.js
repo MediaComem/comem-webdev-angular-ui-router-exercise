@@ -6,12 +6,12 @@ angular.module('DiaLog').controller('ChatsPageController', function(ChatsService
   });
 });
 
-angular.module('DiaLog').controller('ChatPanelController', function(ChatsService) {
+angular.module('DiaLog').controller('ChatPanelController', function(ChatsService, $stateParams) {
   var chatPanelCtrl = this;
 
   chatPanelCtrl.alignment = 'left';
 
-  var chatId = null; // TODO: get chat ID
+  var chatId = $stateParams.id;
   ChatsService.getChat(chatId).then(function(chat) {
     chatPanelCtrl.chat = chat;
   });

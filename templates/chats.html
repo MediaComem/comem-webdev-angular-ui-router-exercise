@@ -1,7 +1,7 @@
 <div class="row">
   <section class="col-md-4">
     <div class="list-group">
-      <a class="list-group-item" ng-repeat="chat in chatsPageCtrl.chats">
+      <a class="list-group-item" ng-repeat="chat in chatsPageCtrl.chats" ui-sref="chats.messages({ id: chat.id })" ui-sref-active="active">
         <small class="pull-right">{{ chat.lastMessage.time | date: "dd.MM.yyyy HH:mm" }}</small>
         <h4 class="list-group-item-heading">{{ chat.user }}</h4>
         <span class="badge">{{ chat.messages.length }}</span>
@@ -10,6 +10,6 @@
     </div>
   </section>
   <section class="col-md-8">
-    <!-- TODO: display chat panel here -->
+    <div ui-view />
   </section>
 </div>

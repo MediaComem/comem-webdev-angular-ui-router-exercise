@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <base href="/">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -18,7 +19,7 @@
 
     <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
-        <a class="navbar-brand" href="#">DiaLog</a>
+        <a class="navbar-brand" ui-sref="home">DiaLog</a>
         <ul class="nav navbar-nav">
             <li><a href="#">Intro</a></li>
             <li><a href="#">Features</a></li>
@@ -27,7 +28,7 @@
         </ul>
         <div class="collpase navbar-collapse navbar-right">
           <ul class="nav navbar-nav">
-            <li><a href="#">My DiaLogs <span class="label label-info">5</span></a></li>
+            <li ui-sref-active="active"><a ui-sref="chats">My DiaLogs <span class="label label-info">5</span></a></li>
             <li><a href="#">My Account</a></li>
             <li><a href="#">Settings</a></li>
           </ul>
@@ -37,7 +38,7 @@
     </nav>
 
     <main class="container">
-      <!-- TODO: display current page here -->
+      <div ui-view />
     </main>
 
     <footer class="navbar navbar-default navbar-fixed-bottom">

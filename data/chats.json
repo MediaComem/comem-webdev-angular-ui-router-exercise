@@ -1,0 +1,60 @@
+[
+  {
+    "id": "09jwv",
+    "user": "Ken Bogard",
+    "messages": [
+      {
+        "text": "Hi there!",
+        "time": "2017-01-20T12:40:00"
+      },
+      {
+        "text": "Hey, hello you! What's up?",
+        "time": "2017-01-20T12:40:00",
+        "mine": true
+      },
+      {
+        "text": "Same old, same old. Wanna come'n play some SFV?!",
+        "time": "2017-01-20T13:16:00"
+      }
+    ]
+  },
+  {
+    "id": "yx8xl",
+    "user": "Tasha Yar",
+    "messages": [
+      {
+        "text": "See you on the other side",
+        "time": "2017-01-01T12:00:00"
+      }
+    ]
+  },
+  {
+    "id": "91ls9",
+    "user": "John Doe",
+    "messages": [
+      {
+        "text": "Mollit ex tempor nisi commodo",
+        "time": "2017-02-01T12:00:00",
+        "mine": true
+      },
+      {
+        "text": "Et duis officia anim voluptate",
+        "time": "2017-02-01T12:01:00"
+      },
+      {
+        "text": "Sint dolore enim occaecat veniam",
+        "time": "2017-02-01T12:02:00",
+        "mine": true
+      },
+      {
+        "text": "Aute consequat anim nulla dolore",
+        "time": "2017-02-01T12:03:00"
+      },
+      {
+        "text": "Exercitation laborum occaecat voluptate id",
+        "time": "2017-02-01T12:04:00",
+        "mine": true
+      }
+    ]
+  }
+]

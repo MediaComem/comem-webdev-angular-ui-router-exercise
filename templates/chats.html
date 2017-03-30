@@ -1,0 +1,15 @@
+<div class="row">
+  <section class="col-md-4">
+    <div class="list-group">
+      <a class="list-group-item" ng-repeat="chat in chatsPageCtrl.chats">
+        <small class="pull-right">{{ chat.lastMessage.time | date: "dd.MM.yyyy HH:mm" }}</small>
+        <h4 class="list-group-item-heading">{{ chat.user }}</h4>
+        <span class="badge">{{ chat.messages.length }}</span>
+        <p class="list-group-item-text">{{ chat.lastMessage.text }}</p>
+      </a>
+    </div>
+  </section>
+  <section class="col-md-8">
+    <!-- TODO: display chat panel here -->
+  </section>
+</div>

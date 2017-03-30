@@ -1,0 +1,45 @@
+<div class="panel panel-info" ng-controller='ChatPanelController as chatPanelCtrl'>
+  <div class="panel-heading">
+    <small>Dialog with</small> <strong>{{ chatPanelCtrl.chat.user }}</strong>
+    <button class="btn btn-link btn-xs pull-right">
+      <span class="glyphicon glyphicon-chevron-down"></span>
+    </button>
+  </div>
+  <div class="panel-body" id="dialog">
+    <div class="row">
+      <div class="col-md-8" ng-repeat='message in chatPanelCtrl.chat.messages' ng-class='{"col-md-offset-4": message.mine}'>
+        <div class="alert clearfix" ng-class='{"alert-warning": message.mine, "alert-success": !message.mine}'>
+         {{ message.text }}
+          <div class="pull-right">
+            <small class="text-info">{{ message.time | date: 'HH:MM' }}</small>
+            <button class="btn btn-link btn-xs" ng-click='chatPanelCtrl.removeMessage(message)'>
+              <span class="glyphicon glyphicon-trash"></span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="panel-footer">
+    <form novalidate ng-submit='chatPanelCtrl.addMessage()'>
+      <div class="form-group">
+        <textarea class="form-control text-left" rows="3" placeholder="New message" ng-model='chatPanelCtrl.text' ng-class='{"text-center": chatPanelCtrl.alignment == "center", "text-right": chatPanelCtrl.alignment == "right"}'></textarea>
+      </div>
+      <div id="align-btns" class="btn-group btn-group-sm">
+        <button type='button' class="btn btn-default" ng-class='{active: chatPanelCtrl.alignment == "left"}' ng-click='chatPanelCtrl.changeAlignment("left")'>
+          <span class="glyphicon glyphicon-align-left"></span>
+        </button>
+        <button type='button' class="btn btn-default" ng-class='{active: chatPanelCtrl.alignment == "center"}' ng-click='chatPanelCtrl.changeAlignment("center")'>
+          <span class="glyphicon glyphicon-align-center"></span>
+        </button>
+        <button type='button' class="btn btn-default" ng-class='{active: chatPanelCtrl.alignment == "right"}' ng-click='chatPanelCtrl.changeAlignment("right")'>
+          <span class="glyphicon glyphicon-align-right"></span>
+        </button>
+      </div>
+      <button class="btn btn-success pull-right btn-sm">
+        <span class="glyphicon glyphicon-send"></span>
+        Send!
+      </button>
+    </form>
+  </div>
+</div>
